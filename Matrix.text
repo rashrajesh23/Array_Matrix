@@ -1,0 +1,52 @@
+package rash.project;
+
+public class Logic2Matrix {
+
+	public static void main(String[] args) {
+		
+		Logic2Matrix lg = new Logic2Matrix();
+		lg.addition();
+
+	        }
+	 
+	    private void addition() {
+	        int[][][] marks ={{ 
+	               {90, 89,88}, //marks[0]
+	               {87, 89,56},
+	               {87, 90,56}},
+	     
+	               {{90, 89,88},//marks[1] 
+	               {87, 89,56},
+	               {87, 90,56}}
+	             } ;
+	    int[][] marks2= {
+	            {0,0,0},//two dimensional duplicate array
+	            {0,0,0},   //for storing purpose
+	            {0,0,0}};
+	     
+	 int k=0;
+	    for(int j=0;j<marks[0].length;j++)//loop for row
+	    {   
+	        for(int i=0;i<marks[0].length;i++) //loop for col
+	        {
+	            marks2[j][i]= marks[k][j][i]+marks[k+1][j][i];
+	        }
+	    }
+	        for(int row=0;row<marks2.length;row++)//loop for print
+	        {
+	            for(int col=0;col<marks2[row].length;col++) 
+	            {
+	            System.out.print(marks2[row][col]+" ");
+	            }
+	        System.out.println();
+	        }
+	         
+	            }
+	        }
+
+OUTPUT:
+
+180 178 176 
+174 178 112 
+174 180 112 
+
