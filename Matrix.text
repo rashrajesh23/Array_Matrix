@@ -1,7 +1,7 @@
 package rash.project;
 
 public class Logic2Matrix {
-
+ // Array_Matrix program
 	public static void main(String[] args) {
 		
 		Logic2Matrix lg = new Logic2Matrix();
